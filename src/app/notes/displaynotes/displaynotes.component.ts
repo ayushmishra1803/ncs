@@ -11,16 +11,16 @@ export class DisplaynotesComponent implements OnInit {
   constructor(private service: NotesService) {}
   notes: Notes[] = [];
 
-  getarray(){
- this.notes = this.service.get();
+  getarray() {
+    this.notes = this.service.get();
   }
 
   ngOnInit(): void {
-   this.getarray();
+    this.getarray();
   }
   delete(note: Notes[]) {
     console.log(note);
-    this.service.delete(note)
+    this.service.delete(note);
     this.getarray();
   }
 
