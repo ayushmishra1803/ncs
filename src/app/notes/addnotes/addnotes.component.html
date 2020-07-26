@@ -1,0 +1,56 @@
+<div style="padding: 50px;">
+  <b>Notes</b><br /><br />
+  <button style="background-color: blue; color: white;">
+    Save
+  </button>
+  <button style="background-color: grey; color: white;">
+    Cancel
+  </button>
+  <div fxLayout fxLayoutAlign="center">
+    <mat-card>
+      <mat-card-title>
+        <p style="color: white; background-color: blue; font-size: small;">
+          Notes Information
+        </p></mat-card-title
+      >
+      <mat-card-content>
+        <form (ngSubmit)="submit(f)" #f="ngForm">
+          <label>Note Text</label>: &nbsp;&nbsp;&nbsp;&nbsp;<input
+            type="text"
+            name="notetext"
+            ngModel
+          /><br /><br>
+          <label for="lname">Note Type*</label>: &nbsp;&nbsp;&nbsp;&nbsp;
+          <select name="type" id="type" name="notetype" required ngModel>
+            <option value="select">--select--</option>
+            <option value="general">General Note</option>
+            <option value="converted">Converted</option>
+            <option value="foreclosure">Foreclosure Activities</option>
+            <option value="Bankruptcy">Bankruptcy</option>
+            <option value="mortage">Mortage Release Activities</option>
+            <option value="payment">Payment Note</option>
+            <option value="warning">Warning Note</option>
+            <option value="violation">Violation Note</option>
+            <option value="closing">Closing Docs</option>
+            <option value="origination">Origination Review</option>
+            <option value="Congressional">Congressional</option>
+            <option value="hecm">HECM Complaint</option>
+            <option value="11">11</option>
+            <option value="aa">AA</option>
+            <option value="bk">BK</option>
+            <option value="cs">CS</option>
+            <option value="cv">CV</option>
+            <option value="fr">FR</option>
+            <option value="ms">MS</option>
+          </select><br><br>
+          <label> Note Operation</label>: &nbsp;&nbsp;
+          <input type="text" name="operation" ngModel>
+          <br> <br>
+          <label> Note Importance </label>
+           <input type="checkbox" name="check" ngModel><br><br>
+          <button mat-raised-button type="submit">Submit</button>
+        </form>
+      </mat-card-content>
+    </mat-card>
+  </div>
+</div>
