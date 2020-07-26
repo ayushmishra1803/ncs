@@ -22,4 +22,11 @@ export class NotesService {
     let index=this.enteredNotes.indexOf(note)
    this.enteredNotes.splice(index,1)
   }
+  editnote:Notes[]=[]
+  settoedit(note){
+    this.editnote.push(note);
+  }
+  getedit(){
+    return this.editnote;
+  }
 }

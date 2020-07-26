@@ -1,3 +1,4 @@
+import { Notes } from './../../interface/notes/notes';
 import { NotesService } from './../../service/notes/notes.service';
 import { Component, OnInit } from '@angular/core';
 import { NgForm } from '@angular/forms';
@@ -10,8 +11,12 @@ import { NgForm } from '@angular/forms';
 export class AddnotesComponent implements OnInit {
   constructor(private service: NotesService) {}
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    this.editnote = this.service.getedit();
+  }
+  editnote:Notes[]=[]
   submit(f: NgForm) {
+
     console.log(f.value.notetype);
 
     this.service.setnotes({
