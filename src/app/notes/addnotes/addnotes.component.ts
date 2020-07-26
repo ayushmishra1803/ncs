@@ -17,7 +17,7 @@ export class AddnotesComponent implements OnInit {
     this.service.setnotes({
       notetype: f.value.notetext,
       noteopertaion: f.value.notetype,
-      botestest: f.value.operation,
+      notestest: f.value.operation,
       importance: f.value.check,
     });
   }

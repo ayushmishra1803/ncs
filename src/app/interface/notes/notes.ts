@@ -1,5 +1,5 @@
 export interface Notes {
-  botestest:string;
+  notestest:string;
   notetype:string;
   noteopertaion:string;
   importance:boolean

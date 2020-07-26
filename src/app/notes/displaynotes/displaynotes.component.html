@@ -22,15 +22,15 @@
               <th>Note Operation</th>
               <th>Note Importance</th>
             </tr>
-            <tr>
-              <td>Row No.</td>
-              <td>Delete</td>
-              <td>Edit</td>
-              <td>Note Text</td>
-              <td>Note Type</td>
-              <td>Case Note Subject</td>
-              <td>Note Operation</td>
-              <td>Note Importance</td>
+            <tr *ngFor="let note of notes">
+              <td  style="padding: 20px;"></td>
+              <td  style="padding: 20px;" (click)="delete(note)">Delete</td>
+              <td  style="padding: 20px;" (click)="delete(note)">Edit</td>
+              <td  style="padding: 20px;">{{note.notestest}}</td>
+              <td  style="padding: 20px;">{{note.notetype}}</td>
+              <td  style="padding: 20px;">Case Note Subject</td>
+              <td  style="padding: 20px;">{{note.noteopertaion}}</td>
+              <td  style="padding: 20px;">{{note.importance}}</td>
             </tr>
           </table>
         </div>

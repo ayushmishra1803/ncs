@@ -18,4 +18,8 @@ export class NotesService {
   get(){
     return [...this.enteredNotes]
   }
+  delete(note){
+    let index=this.enteredNotes.indexOf(note)
+   this.enteredNotes.splice(index,1)
+  }
 }
